@@ -27,7 +27,7 @@
         postal_code: 'short_name'
     };
 
-    const CITIES_TYPE = ['locality', 'administrative_area_level_3'];
+    const CITIES_TYPE = ['locality', 'administrative_area_level_3', 'administrative_area_level_2'];
     const REGIONS_TYPE = ['locality', 'sublocality', 'postal_code', 'country',
         'administrative_area_level_1', 'administrative_area_level_2'];
 
