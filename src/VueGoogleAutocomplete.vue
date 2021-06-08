@@ -333,6 +333,7 @@
              */
             formatResult (place) {
                 let returnData = {};
+
                 for (let i = 0; i < place.address_components.length; i++) {
                     let addressType = place.address_components[i].types[0];
 
@@ -340,6 +341,10 @@
                         let val = place.address_components[i][ADDRESS_COMPONENTS[addressType]];
                         returnData[addressType] = val;
                     }
+                }
+
+                if (place.name) {
+                  returnData['name'] = place.name;
                 }
 
                 returnData['latitude'] = place.geometry.location.lat();
